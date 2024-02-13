@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="heart.png" type="image">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Happy day</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: black;
+        }
+        #imge{
+            background-image: url('profile.jpg');
+            height: 300px;
+            border: solid white 6px;
+            border-radius: 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 300px;
+            margin: auto;
+        }
+        .flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  justify-content: normal;
+  align-items: normal;
+  align-content: normal;
+  padding: 100px;
+  height: auto;
+}
+
+.flex-items:nth-child(1) {
+  display: block;
+  border: solid white 1px;
+  margin: auto;
+  flex-grow: 0;
+  width: max-content;
+  padding: 0;
+  flex-shrink: 0;
+  align-items: center;
+  text-align: center;
+  flex-basis: auto;
+  align-self: center;
+  order: 0;
+}
+
+.flex-items:nth-child(2) {
+  display: block;
+  flex-grow: 0;
+  width: 50%;
+  padding: auto;
+  color: wheat;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self:center;
+  order: 1;
+}
+@media only screen and (max-width:768px){
+    .flex-items:nth-child(2){
+        width: 100%;
+        padding: 30px;
+    }
+    .flex-container {
+        padding: 30px;
+    }
+    #imge{
+        height: 200px;
+        width: 200px;
+    }
+}
+
+.containerr{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.containerr video{
+    width: 100%;
+    height: 100%;
+}
+.text-box{
+    background-color: black;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    mix-blend-mode: multiply;  
+}
+
+#h1{
+    font-size: 100px;
+    font-weight: 900;
+}
+#btn,#btn1{
+    margin: auto;
+    padding:15px 19px;
+    border: solid red 2px;
+    color: red;
+    border-radius: 20px;
+    font-size: 20px;
+    background-color: transparent;
+}
+#btn1{
+    margin: auto;
+    display: none;
+}
+#btn:hover,#btn1:hover{
+    background-color: red;
+    color: white;
+    box-shadow: gray 0px 0px 14px;
+}
+.container{
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+#msg{
+    display: none;
+    background-color: wheat;
+    padding: 30px;
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 20px;
+    height: auto;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+#msg p{
+    margin: auto;
+    text-align: center;
+    width: 70%;
+}
+    </style>
+    <div class="flex-container">
+        <div class="flex-items">
+            <div id="imge" data-aos="zoom-in"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1000"></div>
+        </div>
+        <div class="flex-items" data-aos="fade-right"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="1000">
+            <h1>Amina Rafi</h1>
+            <p>Roses are red, violets are blue, a friend like you is one in a million, it's true! Happy belated Valentine's Day, bestie! <br>Happy Valentine's Day to the most amazing best friend a person could ask for! You bring so much laughter, support, and sunshine into my life. So grateful to have you by my side, always.</p>
+        </div>
+     </div>
+     <div class="containerr">
+         <video autoplay loop muted>
+             <source src="rosevide.mp4" type="video/mp4">
+         </video>
+         <div class="text-box"><h1 id="h1">Amina Rafi</h1></div>
+     </div>
+     <div class="container">
+        <button id="btn" onclick="showmsg()">I wanna say you something, click here!</button>
+        <br><br>
+<div id="msg" data-aos="zoom-in"
+data-aos-offset="200"
+data-aos-delay="50"
+data-aos-duration="1000">
+    <h3>Aslam o Alaikom</h3>
+    <h5>Umeed hai Kheriyat sy hoon gi</h5>
+    <p>Umeed kya obviously Kheriyat sy hain to msg parh rahin,,,, kher come to the point!! <br>
+       Acha to phir sunain on the occasion of valentine day I decided k chalo apni aik adad achi si dost ko in a very very diffrent way mn wish karu, so that k shayad woh jab university jaye or couples dekhay to low feel nai karay balkay yeh sochay ky haan yrr mjhy bhi kisi ny wish kiya or bohat achay sy wish kiya hehe. Baki shokhi honay ki bilkul bhi zaroorat nahi hai.App sochti hoon gi k shayad kuch tareefain bhi kii hoon gi is mn to dude bhool jain asa kuch nahin honay wala yaha py.Baki jo Kuch oopr Likha hua us ko zyada Dil py nhi lena note it!!
+       orrr haan mn ny ye website kai ghantay laga ky banai hai agar nahi pasand aai to dafa ho jao yawrrr(review lazmi dena)
+    </p><br>kherrr<h2>Happy Valentine Day Mottu</h2>
+    
+</div>
+<br>
+<button id="btn1" onclick="hidmsg()">apka khatam ho gya ho to msg band kr dain?</button>
+
+     </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script>
+        
+    function showmsg(){
+     document.getElementById('msg').style="display:block;"
+     document.getElementById('btn').style="display:none;"
+     document.getElementById('btn1').style="display:block;"
+    }
+    function hidmsg(){
+     document.getElementById('msg').style="display:none;"
+     document.getElementById('btn').style="display:block;"
+     document.getElementById('btn1').style="display:none;"
+    }
+    </script>
+    
+</body>
+</html>
